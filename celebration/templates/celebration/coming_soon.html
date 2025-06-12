@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success Party</title>
+  <style>
+    body {
+      margin: 0;
+      background: url("{% static 'celebration/bg.jpg' %}") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    #countdown {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>🎉 Lets Celebrate 🎉</h1>
+    <h2>Mr. Vaibhav Kumar UPSC RANK 90</h2> 
+    <div class="quote">"Even the highest peak feels warmer when it's climbed with a village that believes in your rise."</div>
+    <div id="countdown"></div>
+  </div>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("June 15, 2025 00:00:00").getTime();
+
+    const timer = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        countdown.innerHTML = "🎊 The celebration has begun! 🎊";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+
+

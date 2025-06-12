@@ -1,0 +1,42 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# SQLite database
+*.sqlite3
+db.sqlite3
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Python virtual environments
+venv/
+env/
+django_env1/
+
+# Media & Static files (generated or uploaded content)
+media/
+static/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Python virtual environments
+venv/
+env/
+
+# Coverage / testing files
+htmlcov/
+coverage.xml
+*.cover
+
+# Migrations (optional, if auto-generated and not needed)
+**/migrations/*.pyc
+**/migrations/__pycache__/

@@ -30,3 +30,26 @@ If you want to see or customize this project:
    ```bash
    git clone https://github.com/snehabuilds95/Invite-Countdown-feature.git
    cd Invite-Countdown-feature
+   
+2. Create a virtual environment:
+
+python3 -m venv django_env
+source django_env/bin/activate
+
+3.Install Django:
+
+pip install django
+
+4.Run the development server:
+
+python manage.py runserver
+
+5.Open your browser:
+
+
+http://127.0.0.1:8000/
+
+http://127.0.0.1:8000/
+
+
+

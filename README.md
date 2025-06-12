@@ -33,23 +33,28 @@ If you want to see or customize this project:
    
 2. Create a virtual environment:
 
-python3 -m venv django_env
-source django_env/bin/activate
+   python3 -m venv django_env
+   source django_env/bin/activate
 
 3.Install Django:
 
-pip install django
+   pip install django
 
 4.Run the development server:
 
-python manage.py runserver
+   python manage.py runserver
 
 5.Open your browser:
 
+   http://127.0.0.1:8000/
 
-http://127.0.0.1:8000/
 
-http://127.0.0.1:8000/
+
+🎨 Sneak Peek
+It looks something like this 👇
+
+
+
 
 
 
